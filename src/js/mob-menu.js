@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const ourProducts = document.querySelector(".our-products");
   const footer = document.querySelector(".footer");
 
-  aboutUs.setAttribute("id", "about_u")
-  bestsellers.setAttribute("id", "beteller")
-  reviews.setAttribute("id", "review")
-  ourProducts.setAttribute("id", "our_product")
-  footer.setAttribute("id", "contact")
+  aboutUs.setAttribute("id", "about_u");
+  bestsellers.setAttribute("id", "beteller");
+  reviews.setAttribute("id", "review");
+  ourProducts.setAttribute("id", "our_product");
+  footer.setAttribute("id", "contact");
 
   menuButton.addEventListener("click", function () {
     menu.classList.toggle("is-hidden");
