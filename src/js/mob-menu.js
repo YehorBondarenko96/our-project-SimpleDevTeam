@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector("[data-menu]");
   const menuItems = menu.querySelectorAll(".menu-li");
   const sections = document.querySelectorAll("section"); 
+  const aboutUs = document.querySelector(".about-us");
+  const bestsellers = document.querySelector(".bestsellers");
+  const reviews = document.querySelector(".reviews");
+  const ourProducts = document.querySelector(".our-products");
+  const subscription = document.querySelector(".subscription");
+
+  aboutUs.setAttribute("id", "about_u")
+  bestsellers.setAttribute("id", "beteller")
+  reviews.setAttribute("id", "review")
+  ourProducts.setAttribute("id", "our_product")
+  subscription.setAttribute("id", "contact")
 
   menuButton.addEventListener("click", function () {
     menu.classList.toggle("is-hidden");
@@ -20,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.remove("no-scroll");
       menuButton.classList.remove("open"); // Возвращаем бургер при клике на пункт меню
       
-      const targetSection = sections[index];
+      const name = menuItem.textContent.toLowerCase().trim().replace(/\s/g, '_').replace(/s/g, '');
+      const targetSection = document.querySelector(`#${name}`);
       const targetOffset = targetSection.offsetTop;
 
       window.scrollTo({
